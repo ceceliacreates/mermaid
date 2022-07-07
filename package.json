@@ -30,7 +30,7 @@
     "lint": "eslint ./ --ext .js,.json,.html,.md",
     "lint:fix": "yarn lint --fix",
     "e2e:depr": "yarn lint && jest e2e --config e2e/jest.config.js",
-    "cypress": "cypress run",
+    "cypress": "RECORD_ALL_CONTENT=1 RECORD_REPLAY_METADATA_FILE=$(mktemp) npx cypress run --browser 'Replay Firefox'",
     "e2e": "start-server-and-test dev http://localhost:9000/ cypress",
     "e2e-upd": "yarn lint && jest e2e -u --config e2e/jest.config.js",
     "dev": "webpack serve --config ./.webpack/webpack.config.e2e.babel.js",
@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "@braintree/sanitize-url": "^6.0.0",
+    "@replayio/cypress": "^0.2.2",
     "d3": "^7.0.0",
     "dagre": "^0.8.5",
     "dagre-d3": "^0.6.4",
