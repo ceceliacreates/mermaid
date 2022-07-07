@@ -7,12 +7,25 @@ So you want to help? That's great!
 Here are a few things to know to get you started on the right path.
 
 ## Development Installation
+
 ```bash
 git clone git@github.com:mermaid-js/mermaid.git
 cd mermaid
 yarn
 yarn test
 ```
+
+## Recording e2e Tests  
+
+This project uses Cypress for e2e testing. This fork is configured to use Replay to record tests.
+
+To run and record tests with Replay:
+
+`yarn e2e`
+
+This command starts the server, runs all e2e Cypress tests, and records a replay for each spec file.
+
+See the [Replay Recording Automated Tests Guide](https://docs.replay.io/docs/recording-automated-tests-5bf7d91b65cd46deab1867b07bd12bdf) for more information on recording and viewing replays.
 
 ## Committing code
 
